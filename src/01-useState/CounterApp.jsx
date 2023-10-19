@@ -20,7 +20,7 @@ export const CounterApp = () => {
 
         <button 
             type="button" 
-            class="btn btn-dark" 
+            className="btn btn-dark" 
             onClick={ 
                 () => setCounter({
                     ...state,
@@ -30,7 +30,7 @@ export const CounterApp = () => {
 
         <button 
             type="button" 
-            class="btn btn-dark" 
+            className="btn btn-dark" 
             onClick={ 
                 () => setCounter({
                     ...state,

@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { useState } from "react"
+import { useEffect, useState } from "react";
+import { Message } from "./Message";
 
 export const SimpleForm = () => {
 
@@ -19,50 +19,57 @@ export const SimpleForm = () => {
     }
 
     useEffect(() => {
-        console.log('useEffect Called');
+        // console.log('useEffect Called');
     }, []);
 
     useEffect(( ) => {
-        console.log('formState Changed');
+        // console.log('formState Changed');
     }, [formState]);
 
     useEffect(( ) => {
-        console.log('email Changed');
+        // console.log('email Changed');
     }, [ email ]);
 
-  return (
-    <>
-        <h1>Formulario Simple</h1>
-        <hr />
 
-        <div className="mb-3 row">
-            <label className="form-label"> Username </label>
-            <div className="col-sm-10">
-                <input 
-                    type="text" 
-                    className="form-control" 
-                    placeholder="Username" 
-                    name="username"
-                    value={ username }
-                    onChange={ onInputChange }
-                />
+
+
+    return (
+        <>
+            <h1>Formulario Simple</h1>
+            <hr />
+
+            <div className="mb-3 row">
+                <label className="form-label"> Username </label>
+                <div className="col-sm-10">
+                    <input 
+                        type="text" 
+                        className="form-control" 
+                        placeholder="Username" 
+                        name="username"
+                        value={ username }
+                        onChange={ onInputChange }
+                    />
+                </div>
             </div>
-        </div>
 
-        <div className="mb-3 row">
-            <label className="form-label"> Email </label>
-            <div className="col-sm-10">
-                <input 
-                    type="email" 
-                    className="form-control" 
-                    placeholder="ejemplo@ejemplo.com" 
-                    name="email" 
-                    value={ email }
-                    onChange={ onInputChange }
-                />
+            <div className="mb-3 row">
+                <label className="form-label"> Email </label>
+                <div className="col-sm-10">
+                    <input 
+                        type="email" 
+                        className="form-control" 
+                        placeholder="ejemplo@ejemplo.com" 
+                        name="email" 
+                        value={ email }
+                        onChange={ onInputChange }
+                    />
+                </div>
             </div>
-        </div>
 
-    </>
-  )
+            {
+                (username === 'strider2') && <Message/>
+            }
+
+        </>
+    )
 }

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useState } from "react"
 
 export const SimpleForm = () => {
@@ -16,6 +17,11 @@ export const SimpleForm = () => {
             [ name ]: value
         });
     }
+
+    useEffect(() => {
+        console.log('useEffect Called');
+    });
+    
 
   return (
     <>

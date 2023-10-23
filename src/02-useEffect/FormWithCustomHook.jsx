@@ -2,7 +2,7 @@ import { useForm } from "../hook/useForm";
 
 export const FormWithCustomHook = () => {
 
-    const { formState, onInputChange, username, email, password} = useForm({
+    const { formState, onInputChange, onResetForm, username, email, password} = useForm({
         username: '',
         email: '',
         password: '',
@@ -68,6 +68,11 @@ export const FormWithCustomHook = () => {
                     />
                 </div>
             </div>
+
+            <button onClick={ onResetForm } type="button" className="btn btn-primary">
+                Borrar
+            </button>
+
         </>
     )
 }
